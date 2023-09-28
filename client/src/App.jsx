@@ -33,14 +33,13 @@ const App = () => {
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
+      setIsError(true);
       console.log(error);
+      setError(error);
+      setIsError(false);
     }
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
-  console.log(isLoading, data, error);
   return (
     <div className='wrapper'>
       <h2>Web Scraping API</h2>
@@ -50,7 +49,6 @@ const App = () => {
           justifyContent: 'center',
         }}
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         autoComplete='off'
         size='large'
         layout='inline'

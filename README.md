@@ -18,3 +18,9 @@ BackEnd:
 - Cheerio
 - Cors
 - Concurrently
+
+# Steps to run the application on local
+
+- install dependencies from client and server directories
+- cd into server directory and run on terminal npm run dev
+  Happy Scrapping ! :)
